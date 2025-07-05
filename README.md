@@ -1,17 +1,20 @@
 # 🌫️ AirQuality
 
-**AirQuality** is a PHP application that visualizes Air Quality Index (AQI) data — specifically **PM2.5** and **PM10** — using interactive line charts powered by [Chart.js](https://www.chartjs.org/).
+**AirQuality** is a PHP web application that visualizes Air Quality Index (AQI) data — specifically **PM2.5** and **PM10** — through interactive line charts powered by [Chart.js](https://www.chartjs.org/).
 
-## 🧩 Features
-
-- 📊 Line charts for PM2.5 and PM10 pollutants  
-- 🏙️ City-based AQI data (from JSON + BZIP2 files)  
-- 📅 Monthly average calculations  
-- 🧱 Clean PHP structure with reusable components  
-- ⚡ Interactive frontend using Chart.js  
+> 🛠️ This project was developed as part of the [Modern PHP: The Complete Guide – From Beginner to Advanced](https://www.udemy.com/course/modern-php-the-complete-guide/) course on **Udemy**.
 
 ---
 
+## 🧩 Features
+
+- 📊 Dynamic line charts for PM2.5 and PM10 pollutants  
+- 🏙️ City-based AQI data parsed from JSON and BZIP2 sources  
+- 📅 Monthly average air quality statistics  
+- 🧱 Clean and modular PHP project structure  
+- ⚡ Interactive frontend powered by Chart.js  
+
+---
 
 ## 📁 Project Structure
 
@@ -19,45 +22,56 @@
 /AirQuality
 │
 ├── data/
-│   ├── index.json         # Maps city name to data file
-│   └── *.bz2              # Compressed AQI datasets
+│   ├── index.json         # Maps each city to a compressed AQI dataset
+│   └── *.bz2              # BZIP2-compressed AQI data files
 │
 ├── inc/
-│   └── functions.php      # Utility functions
+│   └── functions.php      # Utility functions (e.g. HTML escaping)
 │
 ├── scripts/
 │   └── chart.umd.min.js   # Chart.js library
 │
 ├── views/
-│   ├── header.inc.php     # HTML header
-│   └── footer.inc.php     # HTML footer
+│   ├── header.inc.php     # Page header
+│   └── footer.inc.php     # Page footer
 │
-├── index.php              # Main logic file
+├── index.php              # Main application logic
 └── README.md              # Project documentation
+🚀 Getting Started
+✅ Requirements
+PHP 7.4 or newer
 
-## 🚀 Getting Started
+Apache, Nginx, or PHP built-in development server
 
-### ✅ Requirements
-
-- PHP 7.4 or newer  
-- Apache, Nginx, or PHP built-in server
-
-
-# 🛠 Installation
-
+🛠 Installation
 Clone the repository:
 
-```bash
+bash
+Copiar
+Editar
 git clone https://github.com/helderbadim/AirQuality.git
 cd AirQuality
+Start the PHP development server:
 
-## 📦 Data Format
+bash
+Copiar
+Editar
+php -S localhost:8000
+Open your browser and visit:
 
-The `data/index.json` file maps each city to a corresponding `.bz2` file.
+ruby
+Copiar
+Editar
+http://localhost:8000/?city=YourCityName
+Replace YourCityName with one of the cities listed in data/index.json.
 
-### Example entry in a decompressed `.bz2` file:
+📦 Data Format
+The data/index.json file maps each city to its corresponding .bz2 data file.
 
-```json
+Example of decompressed .bz2 content:
+json
+Copiar
+Editar
 {
   "results": [
     {
@@ -70,20 +84,22 @@ The `data/index.json` file maps each city to a corresponding `.bz2` file.
     }
   ]
 }
+📊 Chart Output
+Each selected city displays a line chart with:
 
+Monthly average values for PM2.5 and PM10
 
-## 📊 Chart Output
+Teal line representing PM2.5
 
-Each selected city renders a chart with:
+Purple line representing PM10
 
-- Monthly averages for **PM2.5** and **PM10**
-- **Teal** line for PM2.5
-- **Purple** line for PM10
-- Fully interactive via Chart.js (hover, tooltips)
+Fully interactive behavior (hover, tooltips) using Chart.js
 
-## 🙏 Credits
+🙏 Credits
+Chart.js – JavaScript charting library
 
-- [Chart.js](https://www.chartjs.org/)
-- [OpenAQ](https://openaq.org/) – air quality data
-- [Modern PHP: The Complete Guide - From Beginner to Advanced](https://www.udemy.com/course/modern-php-the-complete-guide/)
-- Developed by [@helderbadim](https://github.com/helderbadim)
+OpenAQ – Public air quality data
+
+Modern PHP: The Complete Guide – From Beginner to Advanced
+
+Developed by @helderbadim
