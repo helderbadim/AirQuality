@@ -37,41 +37,51 @@
 │
 ├── index.php              # Main application logic
 └── README.md              # Project documentation
-🚀 Getting Started
-✅ Requirements
-PHP 7.4 or newer
+```
 
-Apache, Nginx, or PHP built-in development server
+---
 
-🛠 Installation
+## 🚀 Getting Started
+
+### ✅ Requirements
+
+- PHP 7.4 or newer  
+- Apache, Nginx, or PHP built-in development server
+
+---
+
+## 🛠 Installation
+
 Clone the repository:
 
-bash
-Copiar
-Editar
+```bash
 git clone https://github.com/helderbadim/AirQuality.git
 cd AirQuality
+```
+
 Start the PHP development server:
 
-bash
-Copiar
-Editar
+```bash
 php -S localhost:8000
+```
+
 Open your browser and visit:
 
-ruby
-Copiar
-Editar
+```
 http://localhost:8000/?city=YourCityName
-Replace YourCityName with one of the cities listed in data/index.json.
+```
 
-📦 Data Format
-The data/index.json file maps each city to its corresponding .bz2 data file.
+> Replace `YourCityName` with one of the cities listed in `data/index.json`.
 
-Example of decompressed .bz2 content:
-json
-Copiar
-Editar
+---
+
+## 📦 Data Format
+
+The `data/index.json` file maps each city to its corresponding `.bz2` data file.
+
+### Example of decompressed `.bz2` content:
+
+```json
 {
   "results": [
     {
@@ -84,22 +94,26 @@ Editar
     }
   ]
 }
-📊 Chart Output
+```
+
+---
+
+## 📊 Chart Output
+
 Each selected city displays a line chart with:
 
-Monthly average values for PM2.5 and PM10
+- Monthly average values for **PM2.5** and **PM10**
+- **Teal** line representing PM2.5
+- **Purple** line representing PM10
+- Fully interactive behavior (hover, tooltips) using Chart.js
 
-Teal line representing PM2.5
+---
 
-Purple line representing PM10
+## 🙏 Credits
 
-Fully interactive behavior (hover, tooltips) using Chart.js
+- [Chart.js](https://www.chartjs.org/) – JavaScript charting library  
+- [OpenAQ](https://openaq.org/) – Public air quality data  
+- [Modern PHP: The Complete Guide – From Beginner to Advanced](https://www.udemy.com/course/modern-php)  
+- Developed by [@helderbadim](https://github.com/helderbadim)
 
-🙏 Credits
-Chart.js – JavaScript charting library
 
-OpenAQ – Public air quality data
-
-Modern PHP: The Complete Guide – From Beginner to Advanced
-
-Developed by @helderbadim
