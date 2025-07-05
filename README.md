@@ -12,13 +12,6 @@
 
 ---
 
-## 📸 Screenshot
-
-![screenshot](https://user-images.githubusercontent.com/your-placeholder/screenshot.png)
-
-> Replace the image link with your actual screenshot.
-
----
 
 ## 📁 Project Structure
 
@@ -50,7 +43,7 @@
 - Apache, Nginx, or PHP built-in server
 
 
-## 🛠 Installation
+# 🛠 Installation
 
 Clone the repository:
 
